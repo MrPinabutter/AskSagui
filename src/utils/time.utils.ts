@@ -16,9 +16,9 @@ export const timeStringToSeconds = (timeString: string) => {
 export const secondsToTimeString = (seconds: number) => {
   if (seconds < 1) return "<1"
   const minutes = Math.floor(seconds % 3600);
-  const secondsWithoutMinutes = seconds % 60;
+  const secondsWithoutMinutes = Math.ceil(seconds % 60);
 
   return `${
     minutes < 10 ? `0${minutes}` : minutes
-  }:${secondsWithoutMinutes.toFixed(2)}`;
+  }:${secondsWithoutMinutes.toFixed(0)}`;
 };

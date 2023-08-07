@@ -40,13 +40,13 @@ export default function TabOneScreen() {
           showsHorizontalScrollIndicator={false}
         >
           {tags.filter(tag => tag.text).map((tag) => (
-            <Tag key={tag.iconName} text={tag.text} icon={<tag.icon name={tag.iconName} size={14} color={"#d6d6d6"} />} />
+            <Tag key={tag.iconName} text={tag.text} icon={<tag.icon name={tag.iconName} size={14} color={"#eee"} />} />
           ))}
         </ScrollView>
 
-        <View className='my-4 w-full h-px' lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        <View className='my-4 w-full h-px' lightColor="#d6d6d6" darkColor="rgba(255,255,255,0.1)" />
 
-        <View className='flex flex-row flex-wrap w-full gap-2'>
+        <View className='flex flex-row flex-wrap w-full gap-2' lightColor="#eee">
           <InfoCard value={queue?.current?.count} label="Pessoas" icon={Ionicons} iconName='ios-people' />
 
           <InfoCard value={queue?.duration} label="Minutos" icon={MaterialCommunityIcons} iconName='clock-time-two-outline' />
